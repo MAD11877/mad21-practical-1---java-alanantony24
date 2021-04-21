@@ -25,8 +25,29 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     
     Scanner in = new Scanner(System.in);
-    
+    System.out.print("Enter the number of inputs to be taken: ");
+    int numberOfInputs = in.nextInt();
+    int[] numberArray = new int[numberOfInputs];
+    for(int i = 0; i < numberArray.length; i++){
+        System.out.print("Enter the value(s): ");
+        int value = in.nextInt();
+        numberArray[i] = value;
+    }
+    int maxVal = 0;
+    int maxCount = 0;
+    for(int i = 0; i < numberArray.length; i++){
+        int count = 0;
+        for(int j = 0; j < numberArray.length; j++){
+            if(numberArray[i] == numberArray[j]){
+                ++count;
+            }
+            if(count > maxCount){
+                maxCount = count;
+                maxVal = numberArray[i];
+            }
+        }
+    }
+    System.out.println("Mode will be: " + maxVal);
   }
 }
