@@ -11,9 +11,8 @@ public class Question3
      */
      
     Scanner in = new Scanner(System.in);
-    System.out.print("Enter an integer of your choice: ");
     int integer = in.nextInt();
     int result = integer * integer;
-    System.out.println("The result is: " + result);
+    System.out.println(result);
   }
 }
